@@ -15,7 +15,7 @@ library(imager)
 library(retistruct)
 
 # Load functions ----------------------------------------------------------
-source(here("functions", "aoi_functions.R"))
+source(here("function", "aoi_functions.R"))
 
 # Mock data ---------------------------------------------------------------
 mock_data <- data.frame(
