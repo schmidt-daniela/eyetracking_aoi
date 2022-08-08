@@ -18,7 +18,7 @@ kable(et_data)
 
 ## Problem
 
-Did a participant pay visual attention towards an (static) image on the screen? A well-established approach to encounter the question is to define areas of interest (AOIs\*) and to assess (for each unit of time) whether the gaze fell within the respective area or not. As this is done offline (after data collection) in many cases, researcher need to inspect the visual image to identify the coordinates defining their AOI and write appropriate code. The functions provided in this repository aims to simplify this process. By only providing an image as input, a column is added to the eye tracking data containing information on whether the gaze fell within the AOI of the image or not (per unit of time) (function: **addAOI**). Moreover, coordinates, width, and height of the AOI can be calculated (function: **extractAOIParameter**).
+Did a participant pay visual attention towards an (static) image on the screen? A well-established approach to encounter the question is to define areas of interest (AOIs\*) and to assess (for each unit of time) whether the gaze fell within the respective area or not. As this is done offline (after data collection) in many cases, researcher need to inspect the visual image to identify the coordinates defining their AOI and write appropriate code. The functions provided in this repository aims to simplify this process. By only providing an image as input, a column is added to the eye tracking data containing information on whether the gaze fell within the AOI of the image or not (per unit of time) (function: **addAOI**). Moreover, coordinates, width, and height of the AOI can be extracted (function: **extractAOIParameter**).
 
 *\*= the most narrow rectangle covering the image.*
 
