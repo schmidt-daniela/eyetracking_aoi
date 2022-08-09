@@ -4,9 +4,7 @@ README_files/*
 # Single Files
 README.qmd
 README.html
-circle_correct.png
-circle_false_2.png
-circle_false_1.png
+README.md
 aoi_circle.svg
 
 # RStudio Files
