@@ -1,6 +1,6 @@
 ---
-title: "README"
-output: html_document
+title: "ReadMe"
+format: md_document
 ---
 
 # Image-based Calculation of Rectangular Areas of Interest (AOIs) in Eye Tracking Data
