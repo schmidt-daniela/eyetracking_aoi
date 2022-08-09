@@ -18,12 +18,10 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 
 -   There shouldn't be more than one stimulus in the image (see Figure 1-3 below).
 
-::: {layout-ncol="3"}
 ![Figure 1. Correct](image/circle_correct.png)
 
 ![Figure 2. False](image/circle_false_1.png)
 
 ![Figure 3. (unless you want this AOI.)](image/circle_false_2.png)
-:::
 
 ## Example
