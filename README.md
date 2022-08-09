@@ -1,19 +1,8 @@
----
-title: "ReadMe"
-format: md_document
----
-
 # Image-based Calculation of Rectangular Areas of Interest (AOIs) in Eye Tracking Data
 
 Eye tracking data in its most simplistic form may look as follows:
 
-```{r echo = FALSE}
-library(knitr)
-
-et_data <- data.frame(time = c(1:10), x_coordinate = round(rnorm(n = 10, mean = 1000, sd = 20),0), y_coordinate = round(rnorm(n = 10, mean = 500, sd = 10),0))
-
-kable(et_data)
-```
+![](image/data_table.png)
 
 ## Problem
 
@@ -30,11 +19,11 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 -   There shouldn't be more than one stimulus in the image (see Figure 1-3 below).
 
 ::: {layout-ncol="3"}
-![Figure 1. Correct](circle_correct.png)
+![Figure 1. Correct](image/circle_correct.png)
 
-![Figure 2. False](circle_false_1.png)
+![Figure 2. False](image/circle_false_1.png)
 
-![Figure 3. (unless you want this AOI.)](circle_false_2.png)
+![Figure 3. (unless you want this AOI.)](image/circle_false_2.png)
 :::
 
 ## Example
