@@ -5,7 +5,7 @@ README_files/*
 README.qmd
 README.html
 README.md
-#aoi_circle.svg
+aoi_circle.svg
 
 # RStudio Files
 .Rproj.user/
