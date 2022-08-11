@@ -6,6 +6,7 @@ README.qmd
 README.html
 README.md
 aoi_circle.svg
+.DS_Store
 
 # RStudio Files
 .Rproj.user/
