@@ -24,7 +24,7 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 | <img src="image/circle_correct.png" width="186" height="105"> | <img src="image/circle_false_3.png" width="186" height="105"> | <img src="image/circle_false_1.png" width="186" height="105"> | <img src="image/circle_false_2.png" width="186" height="105"> |
 
 
-## Usage of AddAOI()
+## Usage of addAOI()
 
 1.  Paste the eye-tracking data into the folder "data". This is what the example data (data/eyetracking_data.txt) looks like:
 
