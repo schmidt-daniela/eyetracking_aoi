@@ -5,7 +5,7 @@
 
 ## Problem
 
-Did a participant pay visual attention towards an (static) image on the screen? In other (more technical) words, fell the participant's gaze coordinates within a certain area of interest (AOI[^readme-1]) or not? Respective calculations are often conducted offline (i.e., after data collection) and require X- and Y-coordinates of the AOI as well as appropriate code. The functions provided in this repository simplify the process. By only providing an image as input, a column is added to the eye-tracking data containing information on whether the gaze fell within the AOI of the image or not (per unit of time) (function: **addAOI**). Moreover, coordinates, width, and height of the AOI can be extracted (function: **extractAOIParameter**) as they are often required to report in scientific publications.
+Did a participant pay visual attention towards an (static) image on the screen? In other (more technical) words, fell the participant's gaze coordinates within a certain area of interest (AOI[^readme-1]) or not? Respective calculations are often conducted offline (i.e., after data collection) and require X- and Y-coordinates of the AOI as well as appropriate code. The functions provided in this repository simplify the process. By only providing an image as input, a column is added to the eye-tracking data containing information on whether the gaze fell within the AOI of the image or not (per unit of time) (function: **addAOI**). Moreover, coordinates, width, and height of the AOI can be extracted (function: **extractAOIParameter**) as they are often required to be reported in scientific publications.
 
 [^readme-1]: *often defined as the most narrow rectangle covering the image.*
 
