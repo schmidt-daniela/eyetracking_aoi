@@ -26,7 +26,7 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 
 ## Usage of addAOI()
 
-1.  Paste the eye-tracking data into the folder "data". This is what the example data (data/eyetracking_data.txt) looks like:
+1.  Paste eye-tracking data into the folder "data". This is what the example data (data/eyetracking_data.txt) looks like:
 
 | **time** | **x_coordinate** | **y_coordinate** |
 |---------:|-----------------:|-----------------:|
