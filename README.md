@@ -28,11 +28,31 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 
 Install and load the following packages:
 
-    # install.packages("tidyverse")
-    # install.packages("here")
-    # install.packages("imager")
-    # install.packages("retistruct")
+    install.packages("tidyverse")
+    install.packages("here")
+    install.packages("imager")
+    install.packages("retistruct")
+    
     library(tidyverse)
     library(here)
     library(imager)
     library(retistruct)
+
+Paste your eye-tracking data in the folder "data".
+This is what the data looks like in the example:
+| time | x_coordinate | y_coordinate  |
+| --- |---:| ---:|
+| 1 | 906 | 546 |
+| 1 | 906 | 546
+| 2 | 1078 | 560
+| 3 | 960 | 534
+| 4 | 1005 | 542
+| 5 | 1006 | 591
+| 6 | 221 | 75
+| 7 | 183 | 99
+| 8 | 185 | 84
+| 9 | 198 | 102
+| 10 | 181 | 104
+
+Paste the image that was presented during the time that the eye-tracking data refers to in the folder "image".
+
