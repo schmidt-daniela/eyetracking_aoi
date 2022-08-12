@@ -17,6 +17,8 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 
 -   The resolution of the image must be equal to the resolution in which the data was recorded. To check the resolution of the image, one can use the function **checkResolution**.
 
+-   The data must comprise (exactly) one column containing x-coordinates and (exactly) one column containing y-coordinates. If there are two column per coordinate (e.g., for the left and right eye), average those in advance. 
+
 | **correct** | **false** | **also false ...** | **... unless you want this AOI** |
 |:-----------:|:---------:|:-------------:|:--------------------------------:|
 | <img src="image/circle_correct.png" width="186" height="105"> | <img src="image/circle_false_3.png" width="186" height="105"> | <img src="image/circle_false_1.png" width="186" height="105"> | <img src="image/circle_false_2.png" width="186" height="105"> |
