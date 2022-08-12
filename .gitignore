@@ -1,11 +1,4 @@
-# Folder
-README_files/*
-
-# Single Files
-README.qmd
-README.html
 README.md
 aoi_circle.svg
-
-# RStudio Files
+.DS_Store
 .Rproj.user/
