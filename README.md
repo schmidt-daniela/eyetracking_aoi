@@ -24,4 +24,15 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 
 ![Figure 3. (unless you want this AOI.)](image/circle_false_2.png)
 
-## Example
+## Usage
+
+Install and load the following packages:
+
+    # install.packages("tidyverse")
+    # install.packages("here")
+    # install.packages("imager")
+    # install.packages("retistruct")
+    library(tidyverse)
+    library(here)
+    library(imager)
+    library(retistruct)
