@@ -54,5 +54,10 @@ This is what the data looks like in the example:
 | 9 | 198 | 102
 | 10 | 181 | 104
 
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
 Paste the image that was presented during the time that the eye-tracking data refers to in the folder "image".
 
