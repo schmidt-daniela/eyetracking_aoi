@@ -1,12 +1,11 @@
+
+
+
 # Image-based Calculation of Rectangular Areas of Interest (AOIs) in Eye Tracking Data
-
-Eye tracking data in its most simplistic form may look as follows:
-
-![](image/data_table.png)
 
 ## Problem
 
-Did a participant pay visual attention towards an (static) image on the screen? In other (more technical) words, fell the participant's gaze coordinates within a certain area of interest (AOI[^readme-1]) or not? These calculations are often conducted offline (i.e., after data collection) and require X- and Y-coordinates of the AOI as well as appropriate code. The functions provided in this repository simplify the process. By only providing an image as input, a column is added to the eye tracking data containing information on whether the gaze fell within the AOI of the image or not (per unit of time) (function: **addAOI**). Moreover, coordinates, width, and height of the AOI can be extracted (function: **extractAOIParameter**).
+Did a participant pay visual attention towards an (static) image on the screen? In other (more technical) words, fell the participant's gaze coordinates within a certain area of interest (AOI[^readme-1]) or not? Respective calculations are often conducted offline (i.e., after data collection) and require X- and Y-coordinates of the AOI as well as appropriate code. The functions provided in this repository simplify the process. By only providing an image as input, a column is added to the eye tracking data containing information on whether the gaze fell within the AOI of the image or not (per unit of time) (function: **addAOI**). Moreover, coordinates, width, and height of the AOI can be extracted (function: **extractAOIParameter**).
 
 [^readme-1]: *often defined as the most narrow rectangle covering the image.*
 
@@ -18,46 +17,57 @@ Did a participant pay visual attention towards an (static) image on the screen? 
 
 -   There shouldn't be more than one stimulus in the image (see Figure 1-3 below).
 
-![Figure 1. Correct](image/circle_correct.png)
+| **correct** | **false** | **also false ...** | **... unless you want this AOI** |
+|:-----------:|:---------:|:-------------:|:--------------------------------:|
+| <img src="image/circle_correct.png" width="205" height="115"> | <img src="image/circle_false_3.png" width="205" height="115"> | <img src="image/circle_false_1.png" width="205" height="115"> | <img src="image/circle_false_2.png" width="205" height="115"> |
 
-![Figure 2. False](image/circle_false_1.png)
-
-![Figure 3. (unless you want this AOI.)](image/circle_false_2.png)
 
 ## Usage
 
-1.  Paste your eye-tracking data in the folder "data". This is what the data looks like in the example: \| **time** \| **x_coordinate** \| **y_coordinate** \| \| ---:\|---:\| ---:\| \| 1 \| 906 \| 546 \| 2 \| 1078 \| 560 \| 3 \| 960 \| 534 \| 4 \| 1005 \| 542 \| 5 \| 1006 \| 591 \| 6 \| 221 \| 75 \| 7 \| 183 \| 99 \| 8 \| 185 \| 84 \| 9 \| 198 \| 102 \| 10 \| 181 \| 104
+1.  Paste your eye-tracking data in the folder "data". This is what the data looks like in the example:
+
+| **time** | **x_coordinate** | **y_coordinate** |
+|---------:|-----------------:|-----------------:|
+|        1 |              906 |              546 |
+|        2 |             1078 |              560 |
+|        3 |              960 |              534 |
+|        4 |             1005 |              542 |
+|        5 |             1006 |              591 |
+|        6 |              221 |               75 |
+|        7 |              183 |               99 |
+|        8 |              185 |               84 |
+|        9 |              198 |              102 |
+|       10 |              181 |              104 |
+
 
 2.  Paste the image that was presented during the time that the eye-tracking data refers to in the folder "image".
 
-3.  Open an IDE for R (e.g., RStudio). Install and load the following packages:
+3.  Open an IDE for R (e.g., RStudio). Load the following packages:
 
-    install.packages("tidyverse") install.packages("here") install.packages("imager") install.packages("retistruct")
-
-    library(tidyverse) library(here) library(imager) library(retistruct)
+```
+library(tidyverse)
+library(here)
+library(imager)
+library(retistruct)
+```
 
 4.  Load the eye-tracking functions of the repository:
 
-```{=html}
-<!-- -->
 ```
-    source(here("function", "aoi_functions.R"))
-
-4.  Read the eye-tracking data:
-
-```{=html}
-<!-- -->
+source(here("function", "aoi_functions.R"))
 ```
-    et_data <- read.table(here("data", "eyetracking_data.txt"), sep = "\t", header = T)
 
-5.  Apply the function:
+5.  Read the eye-tracking data:
 
-```{=html}
-<!-- -->
 ```
-    addAOI(image_name = "circle.png", data = et_data, x_col = "x_coordinate", y_col = "y_coordinate", aoi_name = "circle") 
+et_data <- read.table(here("data", "eyetracking_data.txt"), sep = "\t", header = T)
+```
 
-6.  Get the output. Here, the participants paid visual attention towards the image (i.e., gaze fell within the AOI) during time 1-5, but not during time 6-10.
+6.  Apply the function **addAOI** and adjust the name of the image in the image folder (here: circle.png), how you named the data in R (here: et_data), how the columns containing x- and y-coordinates are named in the data (here: x_coordinate and y_coordinate), and what should be written in the AOI column (here: circle). Find the function's output below. Here, the participants paid visual attention towards the circle (i.e., gaze fell within the AOI) during time 1-5, but not during time 6-10.
+
+```
+addAOI(image_name = "circle.png", data = et_data, x_col = "x_coordinate", y_col = "y_coordinate", aoi_name = "circle") 
+```
 
 | **time** | **x_coordinate** | **y_coordinate** | **aoi** |
 |---------:|-----------------:|-----------------:|--------:|
