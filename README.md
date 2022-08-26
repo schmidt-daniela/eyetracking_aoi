@@ -1,7 +1,7 @@
 
 
 
-# Image-based Calculation of Rectangular Areas of Interest (AOIs) in Eye Tracking Data
+# Image-based Calculation of Rectangular Areas of Interest (AOIs) in Eye-Tracking Data
 
 ## Problem
 
